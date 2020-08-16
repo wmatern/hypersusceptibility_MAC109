@@ -2,4 +2,15 @@ output
 __pycache__
 .~*
 *.swp
+*.fasta
+*.fa*
+*.gb
+*.fastq
+*.pyc
+*tpp.cfg
+.ipynb*
+scripts/tpp_driver_wm1.sh
+scripts/tpp_driver_wm2.sh
+
+
 

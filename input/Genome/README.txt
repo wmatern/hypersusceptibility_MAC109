@@ -1,0 +1,1 @@
+Place the genome information files (MAC109.fa and MAC109.gb) in this directory.
