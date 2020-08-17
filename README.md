@@ -11,26 +11,20 @@ You will need to install the following packages (and their dependencies) in orde
 * conda (tested with version: 4.8.3)
 
 ## Raw Data
-You can find the Tn-seq data in NCBI's SRA under BioProject: PRJNA559896. You will need to download a number of data files and place them into input folder. A list of commands using the SRA Toolkit is provided in each input folder as a guide for how to download .fastq files from SRA. Genbank file (.gb, .gbff) along with corresponding FASTA files (.fa, .fna) can be downloaded at ftp://ftp.ncbi.nlm.nih.gov/genomes/all/GCA/003/408/535/GCA_003408535.1_ASM340853v1. You will need to rename the files to use the prefix MAC109. The expected file names in order to run this workflow are:
+The necessary Tn-seq data can be found in NCBI SRA under BioProject: PRJNA559896. You will need to add all of the associated fastq files (SRR9953606-SRR953664, 118 files, with files ending in \*\_1.fastq and \*\_2.fastq) into the input/ folder before running the Jupyter notebook. Additionally, the genome information contained in the Genbank file (.gb, .gbff) along with corresponding FASTA files (.fa, .fna) can be downloaded at ftp://ftp.ncbi.nlm.nih.gov/genomes/all/GCA/003/408/535/GCA_003408535.1_ASM340853v1. You will need to rename the genome information files to use the prefix MAC109. 
+
+The expected file names in order to run this workflow are:
 
     input/Genome/MAC109.fa
     input/Genome/MAC109.gb
-    input/.fastq
-    input/.fastq
-    input/.fastq
-    input/.fastq
-    input/.fastq
-    input/.fastq
-    input/.fastq
-    input/.fastq
-    input/.fastq
-    input/.fastq
+
+You can view input/Samples\_Labels.csv to see the list of sample information.
 
 ## Usage
 
 ### Step 1: Download workflow
 
-If you simply want to use this workflow, download and extract the [latest release](https://github.com/).
+If you simply want to run this workflow, download and extract the [latest release](https://github.com/).
 
 ### Step 2: Execute workflow
 
