@@ -7,7 +7,7 @@ in_fold = 'output/hypersus_analysis/'
 out_fold = 'output/hypersus_analysis/'
 
 #CLAR
-fname = in_fold+'TableS1_CLAR.csv'
+fname = in_fold+'TableS3_CLAR.csv'
 
 df = pd.read_csv(fname)[['Genomic Feature','Clarithromycin (5.4ug/mL) - LFC_48h', 'Prediction']]
 df = df[df['Prediction'] != 'Not Significant'] #Do not plot effect sizes for not significant features
@@ -31,7 +31,7 @@ plt.tick_params(
 plt.savefig(out_fold+'CLAR_barplot.svg',bbox_inches='tight')
 
 #RFB
-fname = in_fold+'TableS3_RFB.csv'
+fname = in_fold+'TableS5_RFB.csv'
 
 df = pd.read_csv(fname)[['Genomic Feature','Rifabutin (0.63ug/mL) - LFC_48h', 'Prediction']]
 df = df[df['Prediction'] != 'Not Significant'] #Do not plot effect sizes for not significant features
@@ -55,7 +55,7 @@ plt.tick_params(
 plt.savefig(out_fold+'RFB_barplot.svg',bbox_inches='tight')
 
 #MOXI
-fname = in_fold+'TableS2_MOXI.csv'
+fname = in_fold+'TableS4_MOXI.csv'
 
 df = pd.read_csv(fname)[['Genomic Feature','Moxifloxacin (1.0ug/mL) - LFC_48h', 'Prediction']]
 df = df[df['Prediction'] != 'Not Significant'] #Do not plot effect sizes for not significant features
@@ -79,7 +79,7 @@ plt.tick_params(
 plt.savefig(out_fold+'MOXI_barplot.svg',bbox_inches='tight')
 
 #EMB
-fname = in_fold+'TableS4_EMB.csv'
+fname = in_fold+'TableS6_EMB.csv'
 
 df = pd.read_csv(fname)[['Genomic Feature','Ethambutol (2.1ug/mL) - LFC_48h', 'Prediction']]
 df = df[df['Prediction'] != 'Not Significant'] #Do not plot effect sizes for not significant features

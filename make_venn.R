@@ -19,10 +19,12 @@ emb_sus_set = row.names(emb_df[emb_df['Prediction'] == 'Hypersusceptible',])
 emb_sus_set1 = setdiff(intersect(emb_sus_set, rfb_sus_set), union(moxi_sus_set, clar_sus_set))
 emb_sus_set2 = setdiff(emb_sus_set, emb_sus_set1)
 
+pdf('output/hypersus_analysis/hypersusceptible_venn.pdf')
 plot(euler(list(Clarithromycin = clar_sus_set, Moxifloxacin = moxi_sus_set,
                  Rifabutin = rfb_sus_set, "Ethambutol (1)" = emb_sus_set1, "Ethambutol (2)" = emb_sus_set2), 
            shape='ellipse'), fills= c('#808080','cyan','red','yellow','yellow'),
 quantities = list(type = c("counts")))
+dev.off()
 
 # myV1 = plotVenn(list(Clarithromycin = clar_sus_set, Moxifloxacin = moxi_sus_set, 
 #                      Rifabutin = rfb_sus_set, Ethambutol = emb_sus_set), 
@@ -54,9 +56,12 @@ rfb_tol_set = row.names(rfb_df[rfb_df['Prediction'] == 'Hypertolerant',])
 emb_df = read.csv('output/hypersus_analysis/TableS6_EMB.csv', row.names='Genomic.Feature')
 emb_tol_set = row.names(emb_df[emb_df['Prediction'] == 'Hypertolerant',])
 
+pdf('output/hypersus_analysis/hypertolerant_venn.pdf')
+#Warning message caused by next line due to empty set (EMB):
 plot(euler(list(Clarithromycin = clar_tol_set, Moxifloxacin = moxi_tol_set,
                 Rifabutin = rfb_tol_set, Ethambutol = emb_tol_set), shape='ellipse'),
      fills= c('#808080','cyan','red','yellow'), quantities = list(type = c("counts")))
+dev.off()
 
 # Output union of hypertol mutants for each drug
 tol_set = sort(union(union(clar_tol_set, moxi_tol_set), union(rfb_tol_set, emb_tol_set)))
