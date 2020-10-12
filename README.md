@@ -34,7 +34,9 @@ Run each cell of Jupyter notebook in order.
 
 ### Step 4: Change working directory and run make_venn.R
 `vim make_venn.R`
+
 Set the first line of make_venn.R to the appropriate location.
+
 `Rscript make_venn.R`
 
 ## Report Issue
