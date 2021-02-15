@@ -1,5 +1,5 @@
 # Tn-seq analysis of Mycobacterium Avium antibiotic hypersusceptibility
-This workflow, implemented in a Jupyter notebook and two scripts (make_barplots.py and make_venn.R), seeks to reproduce the results presented in our upcoming paper: "Genetic determinants of antibiotic hypersusceptibility in Mycobacterium avium". Following the steps below should allow you to get identical results to those reported in our paper.
+This workflow, implemented in a Jupyter notebook and two scripts (make_barplots.py and make_venn.R), seeks to reproduce the results presented in our upcoming paper: "Genetic determinants of intrinsic antibiotic tolerance in Mycobacterium avium". Following the steps below should allow you to get identical results to those reported in our paper.
 
 ## Authors
 
